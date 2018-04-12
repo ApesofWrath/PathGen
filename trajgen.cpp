@@ -28,17 +28,21 @@ int main(){
 			case 0:
 				points[0] = {0.0, 0.0, d2r(0.0)};
 				points[1] = {0.01, 0.0, d2r(0.0)};
+				break;
 			//Fill cases with each trajectory. Number of cases = NUM_TRAJECTORIES
 			case 1:
 				points[0] = {0.0, 0.0, d2r(0.0)};
 				points[1] = {-16.0, 0.0, d2r(0.0)};
 				points[2] = {-23.6, 1.5, d2r(-25.0)};
+				break;
 			case 2:
 				points[0] = {-23.6, 1.5, d2r(-25.0)};
 				points[1] = {-17.6, 4.27, d2r(45.0)};
+				break;
 			case 3: 
     				points[0] = {-17.6, 4.27, d2r(45.0)};
 				points[1] = {-23.6, 2.27, d2r(0.0)};
+				break;
 		}
 
 		TrajectoryCandidate candidate;
