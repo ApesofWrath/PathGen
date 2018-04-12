@@ -1,16 +1,27 @@
 import csv
 import matplotlib.pyplot as plot
 
-x=[]
-y=[]
+x_left=[]
+y_left=[]
 
-with open('trajectory.csv','rb') as csvfile:
+x_right=[]
+y_right=[]
+
+with open('trajectory_left.csv','rb') as csvfile:
 	reader = csv.DictReader(csvfile)
 	for row in reader:
-		x.append(float(row['x']))
-		y.append(float(row['y']))
+		x_left.append(float(row['x']))
+		y_left.append(float(row['y']))
 
-plot.plot(x,y)
-#plot.axis([0, 54, 0, 27])
+with open('trajectory_right.csv','rb') as csvfile:
+	reader = csv.DictReader(csvfile)
+	for row in reader:
+		x_right.append(float(row['x']))
+		y_right.append(float(row['y']))
+
+
+plot.plot(x_left,y_left)
+plot.plot(x_right,y_right)
+plot.axis([-30, 5, -5, 30])
 
 plot.show()
